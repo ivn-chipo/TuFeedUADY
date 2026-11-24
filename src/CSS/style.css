@@ -1,1 +1,113 @@
-/*Archivo para el estilo del index*/
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10vw;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    animation-name: flotar;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+/*ANIMACION DE FLOTAR*/
+@keyframes flotar {
+    0% { transform: translate(0, 0px); }
+    50% { transform: translate(0, 5px); }
+    100% { transform: translate(0, -0px); }
+}
+/*-------------------*/
+#noticiaReciente {
+    width: 70vw;
+    min-height: 35vw;
+    border: 5px solid black;
+    margin: 0 auto;
+}
+#noticiaReciente:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#carrusel-box {
+    display: flex;
+    width: 100%;
+}
+
+.franja {
+    width: 5px;
+    flex: 0 0 5px;
+    background: black;
+    margin-inline: 20px;
+}
+
+#carrusel-vp {
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-block: 12px;
+}
+
+#carrusel-track {
+    display: flex;
+    width: max-content;
+    gap: 16px;
+}
+
+.tarjeta {
+    display: flex;
+    width: 320px;
+    min-height: 180px;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    border: 5px solid black;
+    color: black;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+header{
+    text-align: center;
+}
+.contenedor-nav {
+    display: flex;
+    align-items: left;
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.contenedor-nav form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+    min-width: 0;
+}
+.contenedor-footer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.logo-footer {
+    grid-column: 1 / -1;
+    text-align: left;
+    font-weight: bold;
+}
+
+.columna-footer {
+    text-align: left;
+}
+
+.columna-footer ul {
+    padding-left: 20px;
+}

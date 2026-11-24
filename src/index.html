@@ -3,15 +3,154 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>/////</title>
+        <title>TuFeedUADY</title>
         <link rel="stylesheet" href="CSS/style.css">
     </head>
 
     <body>
-        <header></header>
-        <main></main>
-        <footer></footer>
+        <header>
+            <h1>TuFeedUADY</h1> <!--aquí va el logo en grande transparentado-->
+        </header>
 
+        <nav>
+            <div class = "contenedor-nav">
+            <form action="/buscar" method="get"> <!--barra de búsqueda por palabras clave-->
+                <label for="search-input">Buscar por palabras clave</label>
+                <input type="search" id="search-input" name="q" placeholder="Buscar feeds...">
+
+            <label for="feeds-guardados">Feeds guardados</label> <!--desplegable de los feeds guardados del usuario-->
+            <select id="feeds-guardados" name="feed"> <!--lista desplegable de los feeds guardados del usuario-->
+                <option value="">Selecciona un feed guardado</option>
+                <!-- acá van los feeds guardados del usuario con sus valores reales -->
+            </select>
+            <button type="submit">Buscar</button>
+            </form>
+            
+            <form action="/perfil" method="get">
+                <label for="lista-usuario">Perfil</label>
+                <select id="lista-usuario" name="accion">
+                    <option value="" selected disabled>Selecciona una opción</option>
+                    <option value="preferencias">Preferencias</option>
+                    <option value="nombre">Cambiar nombre</option>
+                    <option value="anadir">Añadir feed</option>
+                    <option value="quitar">Quitar feed</option>
+                    <option value="apariencia">Modo claro / oscuro</option>
+                </select>
+                <button type="submit">Ir</button>
+            </form>
+            </div>
+        </nav>
+
+        <main>
+            <!--NOTICIAS PRE-FABRICADAS: contenido ficticio solo para validar la maquetación del prototipo-->
+            <article id="noticiaReciente" aria-labelledby="noticia-1-titulo">
+                <span>Ingenierías y Desarrollo</span>
+                <h2 id="noticia-1-titulo">Estudiantes de Ingeniería diseñan un dron para monitorear cenotes</h2>
+                <p>El prototipo mide la calidad del agua y envía los datos en tiempo real a una plataforma abierta para investigadores.</p>
+                <p><time datetime="2026-11-17">17 de noviembre de 2026</time> · <a href="#" aria-label="Leer noticia completa sobre el dron para monitorear cenotes">Leer noticia completa</a></p>
+            </article>
+
+            <section id="carrusel-box" aria-label="Noticias destacadas">
+
+                <div class="franja" aria-hidden="true"></div>
+
+                <div id="carrusel-vp">
+                    <div id="carrusel-track">
+<!-------------------------------AQUI VAN LAS TARJETAS DE NOTICIAS------------------------------------------------>
+                        <a class="tarjeta" href="#">
+                            <span>Matemáticas y Tecnología</span>
+                            <strong>Abren convocatoria para el concurso estatal de programación</strong>
+                            <time datetime="2026-11-16">16 nov 2026</time>
+                        </a>
+                        <a class="tarjeta" href="#">
+                            <span>Arquitectura</span>
+                            <strong>Exposición de maquetas sobre vivienda sustentable en el trópico</strong>
+                            <time datetime="2026-11-15">15 nov 2026</time>
+                        </a>
+                        <a class="tarjeta" href="#">
+                            <span>Medicina y Salud</span>
+                            <strong>Jornada gratuita de detección de diabetes en el campus de la salud</strong>
+                            <time datetime="2026-11-14">14 nov 2026</time>
+                        </a>
+                        <a class="tarjeta" href="#">
+                            <span>Ingeniería Química y Procesos</span>
+                            <strong>Laboratorio desarrolla bioplástico a partir de cáscara de naranja</strong>
+                            <time datetime="2026-11-13">13 nov 2026</time>
+                        </a>
+                        <a class="tarjeta" href="#">
+                            <span>Arte y Cultura</span>
+                            <strong>Festival de trova universitaria llega a su décima edición</strong>
+                            <time datetime="2026-11-12">12 nov 2026</time>
+                        </a>
+<!------------------------------------------------------------------------------------------------------------>
+                    </div><!--carrusel-track-->
+                </div><!--carrusel-vp-->
+
+                <div class="franja" aria-hidden="true"></div>
+
+            </section><!--carrusel-box-->
+
+            <article id="noticiaReciente" aria-labelledby="noticia-2-titulo">
+                <span>Investigación Científica</span>
+                <h2 id="noticia-2-titulo">Investigadores registran una nueva especie de abeja nativa en la península</h2>
+                <p>El hallazgo refuerza los programas de conservación de la meliponicultura en comunidades mayas.</p>
+                <p><time datetime="2026-11-11">11 de noviembre de 2026</time> · <a href="#" aria-label="Leer noticia completa sobre la nueva especie de abeja">Leer noticia completa</a></p>
+            </article>
+
+            <article id="noticiaReciente" aria-labelledby="noticia-3-titulo">
+                <span>Entorno y Hábitat</span>
+                <h2 id="noticia-3-titulo">Proyecto estudiantil reforesta 2 hectáreas con especies de selva baja</h2>
+                <p>Más de 300 voluntarios plantaron ceibas, chakás y ramones durante el fin de semana.</p>
+                <p><time datetime="2026-11-10">10 de noviembre de 2026</time> · <a href="#" aria-label="Leer noticia completa sobre la reforestación estudiantil">Leer noticia completa</a></p>
+            </article>
+
+            <article id="noticiaReciente" aria-labelledby="noticia-4-titulo">
+                <span>Odontología</span>
+                <h2 id="noticia-4-titulo">Brigada de salud bucal atenderá a escuelas primarias de la zona oriente</h2>
+                <p>Alumnos de los últimos semestres realizarán revisiones y talleres de higiene dental para niñas y niños.</p>
+                <p><time datetime="2026-11-09">9 de noviembre de 2026</time> · <a href="#" aria-label="Leer noticia completa sobre la brigada de salud bucal">Leer noticia completa</a></p>
+            </article>
+            
+        </main>
+        
+        <footer>
+            <div class = "contenedor-footer"> <!-- div mayor que engloba todo el footer-->
+                <div class = "logo-footer">Explora más feeds</div> <!-- div con el logo de la página-->
+
+                <div class = "columna-footer"> <!--primera columna-->
+                    <h4>Ciencias Exactas e Ingenierías</h4>
+                    <ul> <!--lista no ordenada de la primera columna con sus elementos-->
+                        <li><a href="">Matemáticas y Tecnología</a></li>
+                        <li><a href="">Ingenierías y Desarrollo</a></li>
+                        <li><a href="">Ingeniería Química y Procesos</a></li>
+
+                    </ul>
+                </div>
+
+                <div class = "columna-footer"> <!--segunda columna-->
+                    <h4>Arquitectura, Hábitat, Arte y Diseño</h4>
+                    <ul>
+                        <li><a href="">Arquitectura</a></li>
+                        <li><a href="">Entorno y Hábitat</a></li>
+                        <li><a href="">Arte y Cultura</a></li>
+                    </ul>
+                </div>
+
+                <div class = "columna-footer"> <!--tercera columna-->
+                    <h4>Ciencias de la Salud</h4>
+                    <ul>
+                        <li><a href="">Medicina y Salud</a></li>
+                        <li><a href="">Enfermería</a></li>
+                        <li><a href="">Odontología</a></li>
+                        <li><a href="">Investigación Científica</a></li>
+                    </ul>
+                </div>
+                <!--los elementos de las listas son placeholders y pueden ser cambiados a futuro-->
+                <!--se le aplicará flexbox para desplegarlos de forma horizontal en la página-->
+            </div>
+
+
+        </footer>
         <script src="JS/index.js"></script>
     </body>
 </html>

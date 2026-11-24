@@ -14,7 +14,11 @@ El propósito principal de nuestro proyecto es organizar y mostrar información 
 - Cambiar, en futuras versiones, entre modo claro y modo oscuro
 
 ### Estado del proyecto
+<<<<<<< HEAD
 Esta versión corresponde a una *primera etapa de desarrollo (prototipo visual). Utiliza noticias ficticias para probar la distribución y el diseño de la interfaz. Actualmente **no cuenta con base de datos ni servidor *backend**, por lo que funciones como la búsqueda, el perfil, los feeds guardados y los enlaces aún no realizan acciones reales.
+=======
+Esta versión corresponde a una **primera etapa de desarrollo (prototipo visual)**. Utiliza noticias ficticias para probar la distribución y el diseño de la interfaz. Actualmente **no cuenta con base de datos ni servidor *backend***, por lo que funciones como la búsqueda, el perfil, los feeds guardados y los enlaces aún no realizan acciones reales.
+>>>>>>> 0ffeabc1a93056dc33d69e698260e945d36cb7a9
 
 ## Implementación en esta primera entrega 
 - Estructura de página principal con encabezado, barra de navegación, noticias recientes, carrusel de noticias destacadas y pie de página.
@@ -23,7 +27,11 @@ Esta versión corresponde a una *primera etapa de desarrollo (prototipo visual).
 ## Tecnologías utilizadas
 - HTML: Utilizado para la realización del encabezado, barra de navegación, noticias recientes, carrusel de noticias destacadas y pie de página.
 - CSS: Utilizado para distribuir elementos horizontal y verticalmente, crear márgenes y espacios entre secciones, cambiar el tamaño de las tarjetas cuando el cursor pasa sobre ellas, aplicar animaciones, etc.
+<<<<<<< HEAD
 - JavaScript: Utilizado para controlar el carrusel de noticias, iniciar el carrusel, mover las tarjetas automáticamente, detectar cuando el cursor está sobre el carrusel, pausar el carrusel al pasar el mouse sobre él, reiniciar automáticamente la posición del carrusel para crear el efecto infinito.
+=======
+- JavaScript: Utilizado para controlar el carrusel de noticias, iniciar el carrusel, mover las tarjetas automáticamente, detectar cuando el cursor está sobre el carrusel, pausar el carrusel al pasar el mouse sobre él, reiniciar automáticamente la posición del carrusel para crear el efecto infinito. 
+>>>>>>> 0ffeabc1a93056dc33d69e698260e945d36cb7a9
 
 ## Integrantes del equipo:
 - Ivan Alejandro Chi Polanco
