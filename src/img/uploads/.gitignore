@@ -1,0 +1,4 @@
+# Las fotos que suben los usuarios no se versionan
+*
+!.gitignore
+!.htaccess
