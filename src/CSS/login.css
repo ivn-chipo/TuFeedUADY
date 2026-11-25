@@ -66,6 +66,11 @@ button:hover,
     text-align: center;
 }
 
+#mensaje-login {
+    min-height: 1em;
+    color: #a00000;
+}
+
 @keyframes aparecer {
     from { opacity: 0; }
     to { opacity: 1; }

@@ -1,0 +1,87 @@
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+}
+
+header nav,
+#form-busqueda {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+main {
+    display: grid;
+    gap: 24px;
+}
+
+section,
+.feed-item {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.grupo-campo {
+    margin-bottom: 16px;
+}
+
+.grupo-campo label,
+#form-busqueda label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button,
+a {
+    padding: 9px 12px;
+}
+
+#lista-feeds {
+    display: grid;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.feed-item h3 {
+    margin-top: 0;
+}
+
+.feed-item-url {
+    overflow-wrap: anywhere;
+}
+
+.feed-item button {
+    margin-right: 8px;
+}
+
+.mensaje-error {
+    color: #a00000;
+}
+
+.mensaje-exito {
+    color: #176b2c;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    section,
+    .feed-item {
+        animation: aparecer 250ms ease-out;
+    }
+
+    @keyframes aparecer {
+        from { opacity: 0; transform: translateY(4px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}

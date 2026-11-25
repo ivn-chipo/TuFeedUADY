@@ -1,22 +1,50 @@
 const formRegistro = document.getElementById("formRegistro");
+const mensajeRegistro = document.getElementById("mensaje-registro");
 
-formRegistro.addEventListener("submit", (evento) => {
+formRegistro.addEventListener("submit", async (evento) => {
     evento.preventDefault();
 
-    const datos = {
-        nickname: document.getElementById("nickname").value.trim(),
-        correo: document.getElementById("correo").value.trim(),
-        campus: document.querySelector('input[name="campus"]:checked').value,
-        intereses: Array.from(
-            document.querySelectorAll('input[name="intereses[]"]:checked'),
-            (checkbox) => checkbox.value
-        )
-    };
+    const boton = formRegistro.querySelector('button[type="submit"]');
+    boton.disabled = true;
+    mensajeRegistro.textContent = "";
 
-    console.log(datos);
+    let respuesta;
+    try {
+        respuesta = await fetch("includes/auth.php?accion=registro", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            credentials: "same-origin",
+            body: JSON.stringify({
+                nickname: document.getElementById("nickname").value.trim(),
+                correo: document.getElementById("correo").value.trim(),
+                password: document.getElementById("password").value,
+                campus: document.querySelector('input[name="campus"]:checked').value
+            })
+        });
+    } catch {
+        mensajeRegistro.textContent = "No se pudo conectar con el servidor. Verifica que PHP y MySQL estén activos.";
+        boton.disabled = false;
+        return;
+    }
 
-    localStorage.setItem("user_nickname", datos.nickname);
-    localStorage.setItem("user_correo", datos.correo);
-    localStorage.setItem("user_campus", datos.campus);
-    localStorage.setItem("user_intereses", JSON.stringify(datos.intereses));
+    let resultado;
+    try {
+        resultado = await respuesta.json();
+    } catch {
+        mensajeRegistro.textContent = "El servidor devolvió una respuesta que no se pudo leer.";
+        boton.disabled = false;
+        return;
+    }
+
+    if (!respuesta.ok || !resultado.ok) {
+        const erroresCampos = Object.values(resultado.campos || {}).join(". ");
+        mensajeRegistro.textContent = [resultado.error, erroresCampos].filter(Boolean).join(": ");
+        boton.disabled = false;
+        return;
+    }
+
+    window.location.href = "index.html";
 });

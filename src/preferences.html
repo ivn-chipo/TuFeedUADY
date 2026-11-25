@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro UADY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta | TuFeedUADY</title>
     <!--Vinculamos la hoja de estilos CSS-->
     <link rel="stylesheet" href="CSS/preferences.css">
 </head>
@@ -10,56 +11,44 @@
 
     <div class="contenedor-login">
         <!-- 1ª Seccion: La bienvenida-->
-        <h2>Bienvenido</h2>
-        <p>Cuentanos sobre ti</p>
+        <h2>Crear cuenta</h2>
+        <p>Cuéntanos sobre ti</p>
 
         <!--Formulario principal en donde se pedira: Nombre, Campus, Intereses y algun correo electronico -->
         <form id="formRegistro">
             
-            <!-- Input para el nickname / usuario -->
             <div class="grupo-campo">
                 <label for="nickname">Tu usuario o nickname:</label>
-                <input type="text" id="nickname" name="nickname" placeholder="Ej. Victor123" required>
+                <input type="text" id="nickname" name="nickname" autocomplete="username" minlength="3" maxlength="30" required>
             </div>
 
-            <!-- Seleccion de Campus UADY -->
             <div class="grupo-campo">
-                <label>Vengo de:</label>
-                <!-- Usamos botones de radio agrupados con el mismo "name" para que sea facil de usar y validar, 
-                    asi el usuario solo puede elegir una opcion y nos parecio mas comodo para la interfaz -->
+                <label>Campus:</label>
                 <div class="opciones-campus">
                     <label><input type="radio" name="campus" value="CCEI" required> CCEI</label>
                     <label><input type="radio" name="campus" value="CAHAD"> CAHAD</label>
-                    <label><input type="radio" name="campus" value="CCSE">CCSE</label>
-                    <label><input type="radio" name="campus" value="Otros"> Algun otro campus UADY</label>
+                    <label><input type="radio" name="campus" value="CCSE"> CCSE</label>
+                    <label><input type="radio" name="campus" value="Otros"> Otro campus UADY</label>
                 </div>
             </div>
 
-            <!-- Intereses (cambiaran de forma dinamica con JS mas adelante) -->
-            <div class="grupo-campo" id="seccion-intereses">
-                <label>¿Algun interes en particular?</label>
-                <div id="contenedor-checkboxes">
-                    <label><input type="checkbox" name="intereses[]" value="Videojuegos"> Videojuegos</label>
-                    <label><input type="checkbox" name="intereses[]" value="Informatica"> Informatica</label>
-                    <label><input type="checkbox" name="intereses[]" value="Quimica"> Quimica</label>
-                    <label><input type="checkbox" name="intereses[]" value="Otros"> Otros</label>
-                </div>
-            </div>
-
-            <!-- Input para el correo -->
             <div class="grupo-campo">
-                <label for="correo">Danos un correo para linear tu perfil:</label>
-                <input type="email" id="correo" name="correo" placeholder="example@example.com" required>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" maxlength="120" required>
             </div>
 
-            <!-- Boton de siguiente / enviar -->
-            <button type="submit" id="btnSiguiente">Siguiente</button>
+            <div class="grupo-campo">
+                <label for="password">Contraseña (mínimo 8 caracteres):</label>
+                <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" maxlength="72" required>
+            </div>
+
+            <button type="submit" id="btnSiguiente">Crear cuenta</button>
 
         </form>
+        <p id="mensaje-registro" role="status" aria-live="polite"></p>
         <p class="enlace-login">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
     </div>
 
-    <!-- Vinculamos nuestro archivo de JavaScript -->
     <script src="JS/preferences.js"></script>
 </body>
 

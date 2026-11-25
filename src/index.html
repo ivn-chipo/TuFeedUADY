@@ -26,18 +26,11 @@
             <button type="submit">Buscar</button>
             </form>
             
-            <form action="/perfil" method="get">
-                <label for="lista-usuario">Perfil</label>
-                <select id="lista-usuario" name="accion">
-                    <option value="" selected disabled>Selecciona una opción</option>
-                    <option value="preferencias">Preferencias</option>
-                    <option value="nombre">Cambiar nombre</option>
-                    <option value="anadir">Añadir feed</option>
-                    <option value="quitar">Quitar feed</option>
-                    <option value="apariencia">Modo claro / oscuro</option>
-                </select>
-                <button type="submit">Ir</button>
-            </form>
+            <div class="acciones-cuenta">
+                <a href="feeds.html">Preferencias de feeds</a>
+                <span id="usuario-sesion" aria-live="polite"></span>
+                <button type="button" id="cerrar-sesion">Cerrar sesión</button>
+            </div>
             </div>
         </nav>
 
@@ -143,6 +136,7 @@
 
 
         </footer>
+        <script src="JS/sesion.js"></script>
         <script src="JS/index.js"></script>
     </body>
 </html>

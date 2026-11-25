@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis preferencias | TuFeedUADY</title>
+    <link rel="stylesheet" href="CSS/feeds.css">
+</head>
+<body>
+    <header>
+        <h1>Preferencias de feeds</h1>
+        <p id="usuario-sesion" aria-live="polite"></p>
+        <nav>
+            <a href="index.html">Volver al inicio</a>
+            <button type="button" id="cerrar-sesion">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <main>
+        <p id="mensaje" role="status" aria-live="polite"></p>
+
+        <section>
+            <h2>Agregar o editar un feed</h2>
+            <form id="form-feed">
+                <input type="hidden" id="feed-id">
+                <div class="grupo-campo">
+                    <label for="feed-tema">Tema:</label>
+                    <input type="text" id="feed-tema" maxlength="60" required>
+                </div>
+                <div class="grupo-campo">
+                    <label for="feed-url">URL del feed RSS:</label>
+                    <input type="url" id="feed-url" maxlength="500" required>
+                </div>
+                <button type="submit" id="guardar-feed">Agregar feed</button>
+                <button type="button" id="cancelar-edicion" hidden>Cancelar edición</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Mis feeds guardados</h2>
+            <form id="form-busqueda">
+                <label for="buscar-feeds">Buscar por tema o URL:</label>
+                <input type="search" id="buscar-feeds" maxlength="100">
+                <button type="submit">Buscar</button>
+                <button type="button" id="mostrar-todos">Mostrar todos</button>
+            </form>
+            <p id="estado-feeds" aria-live="polite"></p>
+            <div id="lista-feeds"></div>
+        </section>
+    </main>
+
+    <script src="JS/feeds.js"></script>
+</body>
+</html>
