@@ -11,6 +11,7 @@ body {
     max-width: 100%;
     padding: 30px;
     box-sizing: border-box;
+    animation: flotar 4s ease-in-out infinite;
 }
 
 h2 {
@@ -43,4 +44,20 @@ input[type="email"] {
 button {
     width: 100%;
     padding: 10px;
+}
+
+.enlace-login {
+    text-align: center;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contenedor-login {
+        animation: none;
+    }
 }

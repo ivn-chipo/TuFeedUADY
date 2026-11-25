@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-login {
+    width: 350px;
+    max-width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 12px;
+    animation: aparecer 500ms ease-out, flotar 4s ease-in-out 500ms infinite;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+.grupo-campo {
+    margin-bottom: 15px;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button,
+.enlace-registro a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    background: white;
+    color: black;
+    font: inherit;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 200ms ease;
+}
+
+button:hover,
+.enlace-registro a:hover {
+    transform: translateY(-2px);
+}
+
+.enlace-registro {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contenedor-login {
+        animation: none;
+    }
+
+    button,
+    .enlace-registro a {
+        transition: none;
+    }
+}

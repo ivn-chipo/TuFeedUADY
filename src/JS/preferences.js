@@ -6,7 +6,7 @@ formRegistro.addEventListener("submit", (evento) => {
     const datos = {
         nickname: document.getElementById("nickname").value.trim(),
         correo: document.getElementById("correo").value.trim(),
-        campus: document.getElementById("campus").value,
+        campus: document.querySelector('input[name="campus"]:checked').value,
         intereses: Array.from(
             document.querySelectorAll('input[name="intereses[]"]:checked'),
             (checkbox) => checkbox.value
