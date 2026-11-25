@@ -14,7 +14,7 @@ El propósito principal de nuestro proyecto es organizar y mostrar información 
 - Cambiar, en futuras versiones, entre modo claro y modo oscuro
 
 ### Estado del proyecto
-Esta versión corresponde a una *primera etapa de desarrollo (prototipo visual). Utiliza noticias ficticias para probar la distribución y el diseño de la interfaz. Actualmente **no cuenta con base de datos ni servidor *backend**, por lo que funciones como la búsqueda, el perfil, los feeds guardados y los enlaces aún no realizan acciones reales.
+Esta versión corresponde a una primera etapa de desarrollo (prototipo visual). Utiliza noticias ficticias para probar la distribución y el diseño de la interfaz. **Actualmente no cuenta con base de datos ni servidor *backend***, por lo que funciones como la búsqueda, el perfil, los feeds guardados y los enlaces aún no realizan acciones reales.
 
 ## Implementación en esta primera entrega 
 - Estructura de página principal con encabezado, barra de navegación, noticias recientes, carrusel de noticias destacadas y pie de página.
