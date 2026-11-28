@@ -386,6 +386,10 @@ footer {
     flex-wrap: nowrap;
 }
 
+.theme-toggle {
+    white-space: nowrap;
+}
+
 @media (max-width: 1100px) {
     .contenedor-nav {
         flex-wrap: wrap;
@@ -395,4 +399,58 @@ footer {
     .acciones-cuenta {
         flex-wrap: wrap;
     }
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --page-white: #111827;
+    --page-silver: #1f2937;
+    --surface: #1f2937;
+    --surface-border: #475569;
+    --text-title: #f3f4f6;
+    --text-secondary: #cbd5e1;
+    --accent: #38bdf8;
+    --accent-hover: #7dd3fc;
+    --field-background: #111827;
+    --field-border: #64748b;
+}
+
+:root[data-theme="dark"] body {
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.025) 0 1px,
+            transparent 1px 4px
+        ),
+        linear-gradient(
+            180deg,
+            var(--page-silver) 0%,
+            var(--page-white) 16%,
+            var(--page-white) 84%,
+            var(--page-silver) 100%
+        );
+}
+
+:root[data-theme="dark"] nav {
+    background: rgba(31, 41, 55, 0.9);
+}
+
+:root[data-theme="dark"] button,
+:root[data-theme="dark"] .acciones-cuenta a {
+    border-color: #475569;
+    background: linear-gradient(180deg, #374151 0%, #1f2937 100%);
+    color: var(--text-title);
+}
+
+:root[data-theme="dark"] #noticiaReciente,
+:root[data-theme="dark"] .tarjeta {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme="dark"] footer {
+    background: rgba(31, 41, 55, 0.9);
+}
+
+:root[data-theme="dark"] .columna-footer a {
+    color: #7dd3fc;
 }
