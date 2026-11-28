@@ -112,3 +112,262 @@ header{
 .columna-footer ul {
     padding-left: 20px;
 }
+
+/* Cohesión visual con los estilos del login */
+:root {
+    color-scheme: light;
+    --page-white: #ffffff;
+    --page-silver: #e8eaed;
+    --surface: #ffffff;
+    --surface-border: #d1d5db;
+    --text-title: #4b5563;
+    --text-secondary: #6b7280;
+    --accent: #38bdf8;
+    --accent-hover: #0284c7;
+    --field-background: #f8fafc;
+    --field-border: #cbd5e1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--text-title);
+    font-family: "Segoe UI", Roboto, Helvetica, sans-serif;
+    background-color: var(--page-white);
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.03) 0 1px,
+            transparent 1px 4px
+        ),
+        linear-gradient(
+            180deg,
+            var(--page-silver) 0%,
+            var(--page-white) 16%,
+            var(--page-white) 84%,
+            var(--page-silver) 100%
+        );
+    background-attachment: fixed;
+}
+
+header {
+    padding: 1.5rem 1rem 0.75rem;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--text-title);
+    font-size: clamp(1.7rem, 6vw, 2rem);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+nav {
+    border-block: 1px solid var(--surface-border);
+    background: rgba(255, 255, 255, 0.78);
+}
+
+.contenedor-nav {
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.contenedor-nav form,
+.acciones-cuenta {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.acciones-cuenta {
+    display: flex;
+}
+
+label {
+    color: var(--text-title);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+input,
+select {
+    min-width: 0;
+    padding: 0.7rem 0.9rem;
+    border: 1.5px solid var(--field-border);
+    border-radius: 16px;
+    outline: none;
+    background: var(--field-background);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+    color: var(--text-title);
+    font: inherit;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+button,
+.acciones-cuenta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding: 0.55rem 1rem;
+    border: 2px solid #7dd3fc;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 50%, #e2e8f0 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        0 2px 6px rgba(56, 189, 248, 0.25);
+    color: var(--text-title);
+    font: inherit;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+button:hover,
+.acciones-cuenta a:hover {
+    border-color: var(--accent-hover);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.98),
+        0 0 0 3px rgba(56, 189, 248, 0.16),
+        0 4px 12px rgba(56, 189, 248, 0.38);
+    transform: scale(1.02);
+}
+
+button:active,
+.acciones-cuenta a:active {
+    transform: scale(0.99);
+}
+
+button:focus-visible,
+.acciones-cuenta a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+#noticiaReciente {
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    border: 1px solid var(--surface-border);
+    border-radius: 24px;
+    background: var(--surface);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+#noticiaReciente:hover {
+    border-color: #7dd3fc;
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
+}
+
+#noticiaReciente h2 {
+    color: var(--text-title);
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+    font-weight: 500;
+}
+
+#noticiaReciente p,
+.tarjeta time {
+    color: var(--text-secondary);
+}
+
+#carrusel-box {
+    align-items: stretch;
+}
+
+.franja {
+    width: 4px;
+    flex-basis: 4px;
+    border-radius: 9999px;
+    background: var(--accent);
+}
+
+#carrusel-vp {
+    padding: 0.75rem 0.25rem;
+}
+
+#carrusel-track {
+    gap: 1rem;
+}
+
+.tarjeta {
+    padding: 1rem;
+    border: 1px solid var(--surface-border);
+    border-radius: 20px;
+    background: var(--surface);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    color: var(--text-title);
+    text-decoration: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.tarjeta:hover {
+    border-color: #7dd3fc;
+    box-shadow: 0 8px 22px rgba(56, 189, 248, 0.18);
+}
+
+footer {
+    border-top: 1px solid var(--surface-border);
+    background: rgba(232, 234, 237, 0.8);
+}
+
+.contenedor-footer {
+    max-width: 1000px;
+}
+
+.logo-footer {
+    color: var(--text-title);
+    font-size: 1.2rem;
+}
+
+.columna-footer {
+    color: var(--text-secondary);
+}
+
+.columna-footer h4 {
+    color: var(--text-title);
+}
+
+.columna-footer a {
+    color: var(--accent-hover);
+}
+
+@media (max-width: 48rem) {
+    .contenedor-nav,
+    .contenedor-nav form,
+    .acciones-cuenta {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .contenedor-footer {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    main {
+        animation: none;
+    }
+
+    input,
+    select,
+    button,
+    .acciones-cuenta a,
+    #noticiaReciente,
+    .tarjeta {
+        transition: none;
+    }
+}
